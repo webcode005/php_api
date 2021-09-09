@@ -18,13 +18,17 @@ if(isset($_GET['submit']))
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Location Api</title>
+	<title>IP BASED Location Api</title>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!------ Include the above in your HEAD tag ---------->
 	<style type="text/css">
-		.result .row{border: 2px solid black;}
+		.result .row{
+			border: 1.2px solid black;
+      border-radius: 5px;
+      background: white;
+    }
 		h3,p { margin: 15px 0;}
 		.error{color: red;font-weight: bold;}
 	</style>
@@ -32,7 +36,7 @@ if(isset($_GET['submit']))
 <body>
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="background-image: url('https://beratung.com.au/wp-content/uploads/2020/02/android-11-to-clamp-down-on-background-location-access.jpg');">
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
@@ -92,6 +96,12 @@ if(isset($_GET['ipaddr'])){ echo $ip;}?>">
 		<div class="col-md-4"><h3>ISP</h3></div>
 		<div class="col-md-4"></div>
 		<div class="col-md-4"><p><?= $response->isp;?></p></div>
+</div>
+
+<div class="row">
+	<div class="col-md-4"><h3>Know Your Location</h3></div>
+	<div class="col-md-4"></div>
+	<div class="col-md-4"><p><a href="https://www.latlong.net/c/?lat=<?= $response->lat;?>&long=<?= $response->lon;?>" target="blank">Location</a></p></div>
 </div>
 
 

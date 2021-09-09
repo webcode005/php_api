@@ -47,7 +47,10 @@
 <body>
 
 
-<div class="container-fluid">
+<div class="container-fluid" style="
+    color: lawngreen;
+    background-image: url('https://i.pinimg.com/originals/b1/20/25/b1202568d88e8fe9e02e7a67fa42c93e.jpg');
+">
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
@@ -72,7 +75,7 @@ if(isset($_GET['city'])){ echo $city;}?>">
 <?php if(isset($response)): if($response['main']['temp']) {?>
 
 	   <h2 class="text-center"><img src="http://openweathermap.org/img/wn/<?= $current_weather_icon;?>@2x.png" width="150px"></h2>
-	      <h2 class="text-center">Current Temprature In <?= $city;?> Is <?= $temp_in_c;?></h2>
+	      <h2 class="text-center">Current Temprature In <?= $city;?> Is <?= $temp_in_c;?> <sup>o</sup>C</h2>
 <div class="col-md-12 result">
      
 
